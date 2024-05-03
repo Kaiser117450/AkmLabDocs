@@ -3,23 +3,42 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://Kaiser117450.github.io',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: {
-				github: 'https://github.com/withastro/starlight',
-			},
-			sidebar: [
+			
+			favicon: 'images/favicon.png',
+			head: [
+				// Add ICO favicon fallback for Safari.
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
+				  tag: 'link',
+				  attrs: {
+					rel: 'icon',
+					href: '/favicon.png',
+					sizes: '32x32',
+				  },
+				},
+			],
+			title: 'AkmLab',
+			logo: {
+				src: './src/assets/akmlogoikan.png',
+			  },
+			social: {
+				email: 'https://akmal.marzuki@protonmail.com',
+			},
+			customCss: [
+				// Relative path to your custom CSS file
+				'./src/styles/custom.css',
+			  ],
+			sidebar: [
+				
+				{
+					label: 'Introduction',
+					autogenerate: { directory: 'introduction' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'How it Work',
+					autogenerate: { directory: 'how' },
 				},
 			],
 		}),
