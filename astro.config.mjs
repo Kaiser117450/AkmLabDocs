@@ -6,7 +6,6 @@ export default defineConfig({
 	site: 'https://Kaiser117450.github.io',
 	integrations: [
 		starlight({
-			
 			favicon: 'images/favicon.png',
 			head: [
 				// Add ICO favicon fallback for Safari.
