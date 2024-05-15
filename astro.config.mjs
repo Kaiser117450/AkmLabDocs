@@ -39,6 +39,10 @@ export default defineConfig({
 					label: 'How it Work',
 					autogenerate: { directory: 'how' },
 				},
+				{
+					label: 'Blownfish',
+					autogenerate: { directory: 'secret' },
+				},
 			],
 		}),
 	],
